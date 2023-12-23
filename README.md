@@ -1,5 +1,11 @@
 # question_recall_bot
 
+## Contributors
+- R12922045 陳沛妤
+- R11944078 林資融
+- B09611048 蘇蓁葳
+- B10705007 劉冠甫
+  
 ## Codes Structure and How to run codes
 - Question_Recall
 	- mt5_three_stage
