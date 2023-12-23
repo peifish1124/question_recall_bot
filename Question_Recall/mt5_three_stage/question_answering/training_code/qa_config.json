@@ -1,0 +1,13 @@
+{
+  "model_name_or_path": "bert-base-chinese",
+  "tokenizer_name": "bert-base-chinese",
+  "train_file": "../training_data/DRCD_training_qa.json",
+  "output_dir": "../training_result/qa",
+  "per_device_train_batch_size": 1,
+  "per_device_eval_batch_size": 8,
+  "gradient_accumulation_steps": 2,
+  "overwrite_output_dir": true,
+  "do_train": true,
+  "do_eval": false,
+  "max_answer_length": 200
+}
