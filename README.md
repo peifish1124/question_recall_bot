@@ -58,3 +58,4 @@ streamlit run streamlit_code.py
 
 ## Reference
 - question_generation & question_answering training code reference to https://github.com/algolet/question_generation/tree/main
+- options_generation training code reference to https://github.com/huggingface/transformers/blob/main/examples/pytorch/summarization/run_summarization.py
