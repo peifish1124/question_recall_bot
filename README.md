@@ -46,14 +46,38 @@ pip install -r requirements.txt
         - training_data
           - DRCD post processed data(for fine-tuning): DRCD_training_qa.json
       - options_generation
+
         - training and testing data generation
+
         1. Download files from https://github.com/nlpdata/c3/tree/master/data
         2. Runs the following command to generate training and testing data (you should run twice for both training and testing data)
+            ```
+            python og_training_and_testing_file_generation.py --input_file <input_file> --output_file <output_file>
+            ```
+        - inference
+
+          You can use the `og_inference.py` to generate options for a single question-answer pair. The following command is an example of using `og_inference.py` to generate options for a single question-answer pair:
           ```
-          python training_and_testing_file_generation.py --input_file <input_file> --output_file <output_file>
+          python og_inference.py --model_name_or_path <your_model_path_or_huggingface_model_name>
           ```
-        - inference (change the model to your fine-tuned model & question, context to yours)
+          The question and answer will be asked in the command line. If you want to incorporate the options generation model into the whole pipeline, you can use the `main` function in `og_inference.py` as a reference. The input of the function is question, answer, and model_name_or_path.
+          The output of the function is a list of options.
+        
         - training_code
+
+          You will have two options to run the training script. The first one is to edit the `class Args(argparse.Namespace)` section in `train.py` and run the following command:
+          ```
+          python og_train.py
+          ```
+          The second one is to run it as a cmd script:
+          ```
+          python og_train.py <args and values>
+          ```
+          Since we have too many arguments in the training script, the detailed description can be found using the following command:
+          ```
+          python og_train.py --help
+          ```
+          Remember to change make necessary path changes in the arguments to run the training script.
 	- mt5_end_to_end
 	  	- inference (change the model to your fine-tuned model & text to your testing context)
 	        ```
