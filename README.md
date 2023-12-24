@@ -50,21 +50,21 @@ pip install -r requirements.txt
         1. Download files from https://github.com/nlpdata/c3/tree/master/data
         2. Runs the following command to generate training and testing data (you should run twice for both training and testing data)
           ```
-          python training_and_testing_file_generation.py --input_file <input_file> --output_file <output_file>
+          python og_training_and_testing_file_generation.py --input_file <input_file> --output_file <output_file>
           ```
         - inference (change the model to your fine-tuned model & question, context to yours)
         - training_code
           You will have two options to run the training script. The first one is to edit the `class Args(argparse.Namespace)` section in `train.py` and run the following command:
           ```
-          python train.py
+          python og_train.py
           ```
           The second one is to run it as a cmd script:
           ```
-          python train.py <args and values>
+          python og_train.py <args and values>
           ```
           Since we have too many arguments in the training script, the detailed description can be found using the following command:
           ```
-          python train.py --help
+          python og_train.py --help
           ```
           Remember to change make necessary path changes in the arguments to run the training script.
 	- mt5_end_to_end
