@@ -54,6 +54,19 @@ pip install -r requirements.txt
           ```
         - inference (change the model to your fine-tuned model & question, context to yours)
         - training_code
+          You will have two options to run the training script. The first one is to edit the `class Args(argparse.Namespace)` section in `train.py` and run the following command:
+          ```
+          python train.py
+          ```
+          The second one is to run it as a cmd script:
+          ```
+          python train.py <args and values>
+          ```
+          Since we have too many arguments in the training script, the detailed description can be found using the following command:
+          ```
+          python train.py --help
+          ```
+          Remember to change make necessary path changes in the arguments to run the training script.
 	- mt5_end_to_end
 	  	- inference (change the model to your fine-tuned model & text to your testing context)
 	        ```
