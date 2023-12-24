@@ -55,7 +55,27 @@ pip install -r requirements.txt
         - inference (change the model to your fine-tuned model & question, context to yours)
         - training_code
 	- mt5_end_to_end
+	  	- inference (change the model to your fine-tuned model & text to your testing context)
+	        ```
+	        python src/inference.py --model_name_or_path "./model"  --test_file path/to/test.json --text_column instruction  --num_beams 5  --output_dir ./ --overwrite_output_dir true --predict_with_generate true
+	        ```
+	        - training_code
+	        ```
+	        python train.py --model_name_or_path="google/mt5-base"  --num_beams=5 --train_file="path/to/train_m2_mt5.json" --text_column="instruction" --summary_column="output" --preprocessing_num_workers=6 --output_dir="./model" --do_train  --num_train_epochs=10 --auto_find_batch_size --learning_rate=4e-5 --gradient_accumulation_steps=4 --overwrite_output_dir
+	        ```
+	        - training_data
+	          - C3 processed data(for fine-tuning): train_m2_mt5.json
 	- LLM_end_to_end
+   		- inference (change the model to your fine-tuned model & text to your testing context)
+	        ```
+         	python guanaco_generate.py --model_name_or_path /path/to/Taiwan-LLaMa-folder --adapter_path /path/to/adapter_checkpoint --input_file_path /path/to/input.json  --output_file_path /path/to/output.json
+	        ```
+	        - training_code
+	        ```
+	        python qlora.py --model_name_or_path /path/to/Taiwan-LLaMa-folder --dataset_format input-output --dataset /path/to/train_m.json --max_train_samples 7000 --max_steps 500  --do_eval True --save_steps 100
+	        ```
+	        - training_data
+	          - C3 processed data(for fine-tuning): train_m.json
 - Dataset
 - Streamlit_Demo(change the 3 stage models to your fine-tuned models)
 ```
