@@ -222,13 +222,13 @@ def parse_args():
         "--qa_column",
         type=str,
         default=None,
-        help="The name of the column in the datasets containing the full texts (for summarization).",
+        help="The name of the column in the datasets containing questions and answers (for options-generation).",
     )
     parser.add_argument(
         "--choices_column",
         type=str,
         default=None,
-        help="The name of the column in the datasets containing the summaries (for summarization).",
+        help="The name of the column in the datasets containing the wrong answers (for options-generation).",
     )
     parser.add_argument(
         "--use_slow_tokenizer",
