@@ -46,6 +46,14 @@ pip install -r requirements.txt
         - training_data
           - DRCD post processed data(for fine-tuning): DRCD_training_qa.json
       - options_generation
+        - training and testing data generation
+        1. Download files from https://github.com/nlpdata/c3/tree/master/data
+        2. Runs the following command to generate training and testing data (you should run twice for both training and testing data)
+          ```
+          python training_and_testing_file_generation.py --input_file <input_file> --output_file <output_file>
+          ```
+        - inference (change the model to your fine-tuned model & question, context to yours)
+        - training_code
 	- mt5_end_to_end
 	- LLM_end_to_end
 - Dataset

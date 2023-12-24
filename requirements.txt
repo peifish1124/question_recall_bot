@@ -11,3 +11,8 @@ nltk
 jsonlines
 gdown
 openai
+evaluate==0.4.0
+spacy==3.7.1
+tqdm==4.66.1
+pandas==2.1.1
+opencc
