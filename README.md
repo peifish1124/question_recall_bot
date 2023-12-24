@@ -49,11 +49,13 @@ pip install -r requirements.txt
 
         - training and testing data generation
 
+          You can run the `og_training_and_testing_file_generation.py` in the `training_data` folder to generate training and testing data. The following command is an example of using `og_training_and_testing_file_generation.py` to generate training and testing data:
         1. Download files from https://github.com/nlpdata/c3/tree/master/data
         2. Runs the following command to generate training and testing data (you should run twice for both training and testing data)
             ```
             python og_training_and_testing_file_generation.py --input_file <input_file> --output_file <output_file>
             ```
+            Or you can directly use the training and testing data we generated in the `training_data` folder.
         - inference
 
           You can use the `og_inference.py` to generate options for a single question-answer pair. The following command is an example of using `og_inference.py` to generate options for a single question-answer pair:
