@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 ## Codes Structure and How to run codes
 - Question_Recall
-	- mt5_three_stage
+	- three_stage_transformer_model 
       - questions_generation
         - inference (change the model to your fine-tuned model & text to your testing context)
         ```
