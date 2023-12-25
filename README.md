@@ -102,7 +102,13 @@ pip install -r requirements.txt
 	        ```
 	        - training_data
 	          - C3 processed data(for fine-tuning): train_m.json
+	
 - Dataset
+
+  - GPT_story_maker.py
+  - q_gen.py (Clean the data for the first stage of three stage transformer model)
+  - qa.py (Clean the data for the second stage of three stage transformer model)
+
 - Streamlit_Demo(change the 3 stage models to your fine-tuned models)
 ```
 streamlit run streamlit_code.py
