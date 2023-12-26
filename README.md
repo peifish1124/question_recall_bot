@@ -83,7 +83,7 @@ pip install -r requirements.txt
 	- mt5_end_to_end
 	  	- inference (change the model to your fine-tuned model & text to your testing context)
 	        ```
-	        python src/inference.py --model_name_or_path "./model"  --test_file path/to/test.json --text_column instruction  --num_beams 5  --output_dir ./ --overwrite_output_dir true --predict_with_generate true
+	        python inference.py --model_name_or_path "./model"  --test_file path/to/test.json --text_column instruction  --num_beams 5  --output_dir ./ --overwrite_output_dir true --predict_with_generate true
 	        ```
 	        - training_code
 	        ```
@@ -105,9 +105,18 @@ pip install -r requirements.txt
 	
 - Dataset
 
-  - GPT_story_maker.py
+  - GPT_story_maker.py (Generate story from ChatGPT)
+  ```
+  python GPT_story_maker.py
+  ```
   - q_gen.py (Clean the data for the first stage of three stage transformer model)
+  ```
+  python q_gen.py
+  ```
   - qa.py (Clean the data for the second stage of three stage transformer model)
+  ```
+  python qa.py
+  ```
 
 - Streamlit_Demo(change the 3 stage models to your fine-tuned models)
 ```
