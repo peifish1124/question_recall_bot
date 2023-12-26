@@ -90,8 +90,8 @@ pip install -r requirements.txt
 	        python train.py --model_name_or_path="google/mt5-base"  --num_beams=5 --train_file="path/to/train_m2_mt5.json" --text_column="instruction" --summary_column="output" --preprocessing_num_workers=6 --output_dir="./model" --do_train  --num_train_epochs=10 --auto_find_batch_size --learning_rate=4e-5 --gradient_accumulation_steps=4 --overwrite_output_dir
 	        ```
 	        - training_data
-              - you can directly use `train_m2_mt5.json` we generated in the `training_data` folder.
-              - Or you can follow the steps below
+                - you can directly use `train_m2_mt5.json` we generated in the `training_data` folder.
+                - Or you can follow the steps below
                 1. Download files from https://github.com/nlpdata/c3/tree/master/data
                 2. Runs the following command to generate training and testing data (Modify transform.py based on the location of your file.)
                 ```
@@ -107,7 +107,7 @@ pip install -r requirements.txt
 	        python qlora.py --model_name_or_path /path/to/Taiwan-LLaMa-folder --dataset_format input-output --dataset /path/to/train_m.json --max_train_samples 7000 --max_steps 500  --do_eval True --save_steps 100
 	        ```
 	        - training_data
-              - you can directly use `train_m.json` we generated in the `training_data` folder.
+                - you can directly use `train_m.json` we generated in the `training_data` folder.
                 - Or you can follow the steps below
                   1. Download files from https://github.com/nlpdata/c3/tree/master/data
                   2. Runs the following command to generate training and testing data (Modify transform.py based on the location of your file.)
