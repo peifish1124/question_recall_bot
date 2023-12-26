@@ -81,7 +81,7 @@ pip install -r requirements.txt
           ```
           Remember to change make necessary path changes in the arguments to run the training script.
 	- mt5_end_to_end
-	  	- inference (change the model to your fine-tuned model & text to your testing context)
+	  	- inference (change the model to your fine-tuned model & place the test file at path/to/test.json.)
 	        ```
 	        python inference.py --model_name_or_path "./model"  --test_file path/to/test.json --text_column instruction  --num_beams 5  --output_dir ./ --overwrite_output_dir true --predict_with_generate true
 	        ```
@@ -92,7 +92,7 @@ pip install -r requirements.txt
 	        - training_data
 	          - C3 processed data(for fine-tuning): train_m2_mt5.json
 	- LLM_end_to_end
-   		- inference (change the model to your fine-tuned model & text to your testing context)
+   		- inference (change the model to your fine-tuned model & place the test file at path/to/input.json.)
 	        ```
          	python guanaco_generate.py --model_name_or_path /path/to/Taiwan-LLaMa-folder --adapter_path /path/to/adapter_checkpoint --input_file_path /path/to/input.json  --output_file_path /path/to/output.json
 	        ```
